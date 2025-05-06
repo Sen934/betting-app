@@ -1,5 +1,5 @@
-import { RouteObject } from 'react-router-dom';
-import { pathKeys } from '~shared/router';
+import { pathKeys } from '@/shared/router';
+import type { RouteObject } from 'react-router';
 
 export const homePageRoute: RouteObject = {
   path: pathKeys.home,

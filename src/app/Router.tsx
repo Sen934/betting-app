@@ -1,5 +1,6 @@
 import { createBrowserRouter } from 'react-router';
+import { homePageRoute } from '@/pages/home/HomePage.route.tsx';
 
-const router = createBrowserRouter([{ path: '/', Component: () => <div /> }]);
+const router = createBrowserRouter([homePageRoute]);
 
 export { router };
