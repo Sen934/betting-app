@@ -5,7 +5,13 @@ import { GamesDashboard } from '@/widgets/games-dashboard/GamesDashboard.ui.tsx'
 export default function HomePage() {
   return (
     <Stack direction="column" style={{ height: '100%' }}>
-      <Stack direction="row" alignItems="center" spacing={1} component="header">
+      <Stack
+        sx={{ p: 1 }}
+        direction="row"
+        alignItems="center"
+        spacing={1}
+        component="header"
+      >
         <Typography variant="h3">BET</Typography>
         <CasinoOutlinedIcon fontSize="large" />
       </Stack>
