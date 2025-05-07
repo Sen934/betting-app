@@ -1,24 +1,18 @@
 import CasinoOutlinedIcon from '@mui/icons-material/CasinoOutlined';
-import { Box, Typography } from '@mui/material';
+import { Box, Stack, Typography } from '@mui/material';
 import { GamesDashboard } from '@/widgets/games-dashboard/GamesDashboard.ui.tsx';
 
 export default function HomePage() {
   return (
-    <>
-      <Box
-        display="flex"
-        flexDirection="row"
-        alignItems="center"
-        gap="4px"
-        component="header"
-      >
+    <Stack direction="column" style={{ height: '100%' }}>
+      <Stack direction="row" alignItems="center" spacing={1} component="header">
         <Typography variant="h3">BET</Typography>
         <CasinoOutlinedIcon fontSize="large" />
-      </Box>
-      <main>
+      </Stack>
+      <Box component="main" flexGrow={1}>
         <GamesDashboard />
-      </main>
+      </Box>
       <footer>my social</footer>
-    </>
+    </Stack>
   );
 }
