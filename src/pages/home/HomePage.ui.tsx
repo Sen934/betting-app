@@ -12,7 +12,6 @@ export default function HomePage() {
       <Box component="main" flexGrow={1}>
         <GamesDashboard />
       </Box>
-      <footer>my social</footer>
     </Stack>
   );
 }

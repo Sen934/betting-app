@@ -3,17 +3,11 @@ import { Suspense } from 'react';
 import { ErrorHandler } from '@/shared/ui/ErrorHandler.ui.tsx';
 import { logError } from '@/shared/ui/ErrorHandler.lib.tsx';
 import { GamesDashboardSkeleton } from '@/widgets/games-dashboard/GamesDashboard.skeleton.tsx';
-import {
-  Box,
-  Button,
-  Card,
-  CardContent,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Box, Card, CardContent, Stack, Typography } from '@mui/material';
 import { useSuspenseQuery } from '@tanstack/react-query';
 import { gamesQueryOptions } from '@/entities/game/game.api.ts';
 import type { Game } from '@/entities/game/game.types.ts';
+import { CreateGameButton } from '@/features/create-game/create-game.ui.tsx';
 
 export const GamesDashboard: React.FC = () => {
   return (
@@ -25,12 +19,12 @@ export const GamesDashboard: React.FC = () => {
   );
 };
 
-export const BaseGameDashboard: React.FC = () => {
+const BaseGameDashboard: React.FC = () => {
   const { data } = useSuspenseQuery(gamesQueryOptions());
 
   return (
     <Box flexDirection="column" sx={{ p: 2 }}>
-      <Button>Generate Game</Button>
+      <CreateGameButton />
 
       <Stack direction="row" flexWrap="wrap" gap={2}>
         {Object.values(data.games || 0).map((game) => (
