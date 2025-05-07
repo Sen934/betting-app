@@ -16,5 +16,5 @@ It's a great design event for start ups in my opinion. I didn't exactly follow i
 - The architecture can also be implied by various linters. I didn't do it here, because could take some time
 - i've implemented much better looking UI in my career :D, i didn't focus on it here
 
-![img.png](img.png)
+
 
